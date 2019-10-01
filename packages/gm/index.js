@@ -4,4 +4,3 @@ let commands = require('./commands');
 let events = require('./events');
 
 global.ROOT = __dirname;
-

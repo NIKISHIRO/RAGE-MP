@@ -10,19 +10,19 @@ class MongoDB {
 
     _run() {
         const self = this;
-        mongoose.connect('mongodb://localhost/RageDayZ', {useNewUrlParser: true, useUnifiedTopology: true});
-        self._db = mongoose.connection;
-        self._db.on('error', console.error.bind(console, 'connection error:'));
-        self._db.once('open', function() {
-            self._connected = true;
-            console.log(`[MongoDB]: connected to the server`.green);
-        });
-
+        mongoose.connect('mongodb://localhost/RageDayZ', {useNewUrlParser: true, useUnifiedTopology: true})
+            .then(result => {
+                this._connected = true;
+                console.log('MongoDB connected'.green);
+            })
+            .catch(error => {
+                console.log(`[MongoDM]: Error '${error.name}'.`.red);
+            });
         self._userModel = mongoose.model('User', schemes.user);
     }
 
     getUserModel() {
-        return self._userModel;
+        return this._userModel;
     }
 }
 
