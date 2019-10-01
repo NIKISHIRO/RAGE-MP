@@ -9,24 +9,31 @@ class Ticket {
 
     getWinner() {
         let maxPlayerIndex = this.players.length - 1;
+        console.log(`maxPlayerIndex: ${maxPlayerIndex}`);
+
         let winnerNumber = this.randomInteger(0, maxPlayerIndex);
+        console.log(`winnerNumber ${winnerNumber}`);
+        
         let winnerPlayer = this.players[winnerNumber];
+        console.log(`winnerPlayer ${winnerPlayer}`);
+        
         let winnerName = winnerPlayer.name;
+        console.log(`winnerName ${winnerName}`);
 
         if (this.startGame === null) {
             this.startGame = 1;
             this.timerID = setInterval( () => {
-                console.log('timer googogogogo');
                 this.startGame++;
                 if (this.startGame === 10) {
                     let winPrice = this.buyTickets * this.ticketPrice;
-                    player.setVariable('money', parseInt(winPrice + currentMoney));
+                    let money = winnerPlayer.getVariable('money');
+                    winnerPlayer.setVariable('money', parseInt(winPrice + money));
                     mp.players.broadcast(`ПОБЕДИЛ ${winnerName}`);
-                    
-                    clearInterval(timerID);
+
                     this.players = [];
                     this.startGame = null;
                     this.buyTickets = 0;
+                    clearInterval(this.timerID);
                 }
             }, 1000);
         }
@@ -67,7 +74,7 @@ class Ticket {
         this.buyTickets += this.tickets;
         
         this.buyTicket(player, this.tickets);
-        this.getWinner();
+        this.getWinner(currentMoney);
         
         console.log(`money: ${player.getVariable('money')}`);
     }
