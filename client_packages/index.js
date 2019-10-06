@@ -1,1 +1,1 @@
-//require('./gm/auth');
+require('./gm/auth');

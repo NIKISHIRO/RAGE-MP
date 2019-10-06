@@ -13,6 +13,6 @@ fs.readdir(p, (err, files) => {
             }
         }
     } catch (e) {
-        return console.log(e);
+        console.log(e);
     }
 });

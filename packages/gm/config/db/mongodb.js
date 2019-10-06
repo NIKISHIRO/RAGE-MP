@@ -11,14 +11,14 @@ class MongoDB {
     _run() {
         const self = this;
         mongoose.connect('mongodb://localhost/RageDayZ', {useNewUrlParser: true, useUnifiedTopology: true})
-            .then(result => {
+            .then(() => {
                 this._connected = true;
                 console.log('MongoDB connected'.green);
             })
             .catch(error => {
                 console.log(`[MongoDM]: Error '${error.name}'.`.red);
             });
-        self._userModel = mongoose.model('User', schemes.user);
+        self._userModel = mongoose.model('User', schemes.user); 
     }
 
     getUserModel() {

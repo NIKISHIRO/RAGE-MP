@@ -1,7 +1,13 @@
+const Player = require(ROOT+'/modules/users/player');
+
 module.exports = {
     playerJoin: player => {
-        player.setVariable('money', 10000);
         console.log(`${player.name} зашел на сервер.`);
-        player.spawn(new mp.Vector3(-425.517, 1123.620, 325.8544));
+        let p = new Player(player);
+        p.init();
     },
+    playerDeath: (player, reason, killer) => {
+        console.log('death');
+        player.spawn(new mp.Vector3(111, 111, 111));
+    }
 };

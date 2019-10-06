@@ -1,15 +1,53 @@
-.wrap__72c04e5{
+body {background-color: transparent !important;}
+
+.wrap{
     position: absolute;
     left: 50%;
-    top: 5%;
+    top: 20%;
     transform: translateX(-50%);
-    padding: 15px;
-    border: 2px solid #c0c0c0;
-    border-radius: 5px;
 }
 
-.wrap__72c04e5 form {
+.wrap form {
     width: 400px;
+}
+
+.formWrap{
+    border-radius: 0 0 5px 5px;
+    padding: 15px;
+    background: #fff;
+    color: #000;
+    font-size: 18px;
+    transition: all .2s;
+}
+
+.formWrap input:hover {
+    background-color: rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.authBtn {
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.authBtn:hover {
+    opacity: .8;
+}
+
+.login {
+    background: #22272d;
+    color: #fff;
+    width:50%;
+}
+
+.register {
+    background: #e6b333;
+    width: 50%;
 }
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)

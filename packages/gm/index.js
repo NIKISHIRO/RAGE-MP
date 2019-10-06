@@ -1,6 +1,11 @@
-let mongodb = require('./config/db/mongodb');
-let gm = require('./gm');
-let commands = require('./commands');
-let events = require('./events');
+let mongodb, gm, commands, events;
+try {
+    mongodb = require('./config/db/mongodb');
+    gm = require('./gm');
+    commands = require('./commands');
+    events = require('./events');
+} catch (e) {
+    console.log(e);
+}
 
 global.ROOT = __dirname;
