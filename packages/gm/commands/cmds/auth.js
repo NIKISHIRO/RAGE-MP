@@ -1,45 +1,16 @@
 const Player = require(ROOT+'/modules/users/player');
+const Admin = require(ROOT+'/modules/users/admin');
 
 module.exports = {
-    register: (player, fullText, login, email, password) => {
-        console.time('[CommandRegister]');
-
-        if (!fullText) return player.outputChatBox('!{red}/register [login] [email] [password]');
-
-        login = String(login).trim();
-        password = String(password).trim();
-        email = String(email).trim();
-
-        let validLogin = (login) => /^[a-zA-Z0-9_-]{3,16}$/.test(login);
-        let validPassword = (password) => /^[a-zA-Z0-9_-]{6,30}$/.test(password);
-        let validEmail = (email) => /.+@.+\..+/i.test(email);
-        
-        if (!validLogin(login) || !validPassword(password) || !validEmail(email)) {
-            return player.outputChatBox('!{red} Проверьте введенные данные!');
-        }
-
-        let p = new Player(player);
-        p.register(login, email, password);
-        
-        console.timeEnd('[CommandRegister]');
+    alogin: async (player, fulltext, login, code) => {
+        if (!fulltext) return player.outputChatBox('/alogin [login] [code]');
+        admin = new Admin(player);
+        admin.alogin(login, code);
     },
-    login: (player, fullText, login, password) => {
-        console.time('[CommandLogin]');
-
-        if (!fullText) return player.outputChatBox('!{red}/login [login] [password]');
-        
-        login = String(login).trim();
-        password = String(password).trim();
-
-        let p = new Player(player);
-        p.login(login, password);
-
-        console.timeEnd('[CommandLogin]');
-    },
-    save: (player, fullText) => {
+    save: async (player, fullText) => {
         console.time('[CommandSave]');
         let p = new Player(player);
-        p.save(player.name);
+        await p.save(player.name);
         console.timeEnd('[CommandSave]');
     }
 };

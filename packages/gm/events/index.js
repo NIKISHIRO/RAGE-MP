@@ -16,7 +16,4 @@ fs.readdir(p, (err, files) => {
     } catch(e) {
         console.log(e);
     }
-
-
-
 });

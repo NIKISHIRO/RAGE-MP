@@ -7,7 +7,6 @@ module.exports = {
         p.init();
     },
     playerDeath: (player, reason, killer) => {
-        console.log('death');
         player.spawn(new mp.Vector3(111, 111, 111));
     }
 };

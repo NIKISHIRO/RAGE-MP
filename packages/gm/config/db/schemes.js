@@ -1,6 +1,22 @@
 const mongoose = require('mongoose');
 
-let user = new mongoose.Schema({
+const admin = new mongoose.Schema({
+    login: {
+        type: String,
+        required: true
+    },
+    code: {
+        type: String,
+        required: true
+    },
+    level: {
+        type: Number,
+        required: true,
+        default: 0
+    }
+});
+
+const user = new mongoose.Schema({
     login: {
         type: String,
         required: true
@@ -35,6 +51,17 @@ let user = new mongoose.Schema({
     },
 });
 
+let teleport = new mongoose.Schema({
+    point: {
+        type: String,
+    },
+    cords: {
+        type: Object,
+    }
+});
+
 module.exports = {
-    user
+    user,
+    admin,
+    teleport
 };

@@ -19,10 +19,20 @@ class MongoDB {
                 console.log(`[MongoDM]: Error '${error.name}'.`.red);
             });
         self._userModel = mongoose.model('User', schemes.user); 
+        self._adminModel = mongoose.model('Admin', schemes.admin);
+        self._teleportModel = mongoose.model('Teleport', schemes.teleport);
     }
 
     getUserModel() {
         return this._userModel;
+    }
+
+    getAdminModel() {
+        return this._adminModel;
+    }
+
+    getTeleportModel() {
+        return this._teleportModel;
     }
 }
 
