@@ -1,4 +1,7 @@
-try {
+global.ROOT = __dirname;
+
+try {    
+    require('colors');
     require('./modules/inventory');
     require('./modules/loot');
     require('./config/db/mongodb');
@@ -8,5 +11,3 @@ try {
 } catch (e) {
     console.log(e);
 }
-
-global.ROOT = __dirname;
