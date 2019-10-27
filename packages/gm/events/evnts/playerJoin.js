@@ -6,7 +6,7 @@ module.exports = {
         let p = new Player(player);
         p.init();
     },
-    playerDeath: (player, reason, killer) => {
-        player.spawn(new mp.Vector3(111, 111, 111));
+    playerDeath: player => {
+        player.spawn(new mp.Vector3(-80, -223, 44));
     }
 };

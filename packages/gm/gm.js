@@ -17,9 +17,3 @@ function timer(){
 let hour = settings.time.h;
 let minute = settings.time.m;
 setInterval(timer, 1000);
-
-module.exports = {
-    games: {
-        casino: require('./modules/games/casino')
-    }
-};
