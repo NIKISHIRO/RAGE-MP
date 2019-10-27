@@ -1,0 +1,30 @@
+{
+    "weapon_shotgun": {
+        "type": "weapon", "model": "w_sg_pumpshotgun", "rotation": {"x": 90, "y": 111, "z": 108.5}, "weight": 3
+    },
+    "weapon_ak47": {
+        "type": "weapon", "model": "w_ar_assaultrifle", "rotation": {"x": 90, "y": 111, "z": 108.5}, "weight": 3
+    },
+    "weapon_sawedOffShotgun": {
+        "type": "weapon", "model": "w_sg_pumpshotgun", "rotation": {"x": 90, "y": 111, "z": 108.5}, "weight": 3
+    },
+    "ammo_pumpshotgun": {
+        "type": "ammo", "model": "prop_ld_ammo_pack_02", "rotation": {"x": 90, "y": 111, "z": 108.5}, "weight": 1
+    },
+    "ammo_ak47": {
+        "type": "ammo", "model": "prop_ld_ammo_pack_03", "rotation": {"x": 90, "y": 111, "z": 108.5}, "weight": 1
+    },
+    "medicine_medkit": {
+        "type": "medicine", "model": "sm_prop_smug_crate_s_medical", "rotation": {"x": 0, "y": 0, "z": 0}, "weight": 5
+    },
+    "medicine_bandage": {
+        "type": "medicine", "model": "v_ret_ta_paproll2", "rotation": {"x": 0, "y": 0, "z": 0}, "weight": 1
+    },
+    "backpack_coyote": {
+        "type": "backpack", "model": "p_michael_backpack_s", "rotation": {"x": 0, "y": 0, "z": 0}, "weight": 2, "slots": 36
+    },
+    "backpack_tourist": {
+        "type": "backpack", "model": "p_ld_heist_bag_s_2", "rotation": {"x": 0, "y": 0, "z": 0}, "weight": 2, "slots": 54
+    }
+}
+

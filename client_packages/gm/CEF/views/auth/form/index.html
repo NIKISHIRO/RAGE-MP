@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="auth-form">
+        <div class="auth-form__top">
+            <div class="auth-btn__left"><span>Авторизация</span></div>
+            <div class="auth-btn__right auth-btn-focus"><span>Регистрация</span></div>
+        </div>
+        <div class="auth register show">
+            <form>
+                <input type="text" placeholder="Login" name="login">
+                <input type="text" placeholder="Email" name="email">
+                <input type="text" placeholder="Password" name="password">
+            </form>
+            <button class="btn btn-outline-success auth-btn register-btn" disabled>Зарегистрироваться</button>
+            <div class="texterror registerTextError text-danger"></div>
+        </div>
+        <div class="auth login">
+            <form>
+                <input type="text" placeholder="Login" name="login">
+                <input type="text" placeholder="Password" name="password">
+            </form>
+            <button class="btn btn-outline-success auth-btn login-btn" disabled>Авторизоваться</button>
+            <div class="texterror loginTextError text-danger"></div>
+        </div>
+    </div>
+    
+    <script src="../../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

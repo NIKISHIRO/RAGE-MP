@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Object Creator</title>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="object">
+        <div class="object-creator">
+            <div class="object-creator__top">
+                Создание объекта
+            </div>
+            <div class="object-creator__center">
+                <form>
+                    <div class="input-field">
+                        <div>Model</div>
+                        <input type="text" name="model">
+                    </div>
+                    <div class="input-field input-position">
+                        <div>Position</div>
+                        <input type="text" name="position-x"><input type="text" name="position-y"><input type="text" name="position-z">
+                    </div>
+                    <div class="input-field">
+                        <div>Rotation</div>
+                        <input type="text" name="rotation-x"><input type="text" name="rotation-y"><input type="text" name="rotation-z">
+                    </div> 
+                    <div class="input-field">
+                        <div>Alpha</div>
+                        <input type="text" name="alpha">
+                    </div> 
+                    <div class="input-field">
+                        <div>Dimension</div>
+                        <input type="text" name="dimension">
+                    </div> 
+                </form>
+                <button class="btn btn-outline-success object-button">Создать объект</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="index.js"></script></body>
+</html>

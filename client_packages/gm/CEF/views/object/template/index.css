@@ -1,0 +1,47 @@
+body {background-color: transparent;}
+
+.object-creator {
+    background-color: #1b1b1b;
+    width: 800px;
+    color:#fff;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+.object-creator__top {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #272727;
+}
+
+.object-creator__center {
+    padding: 25px;
+}
+
+.input-field input {
+    margin-top: 6px;
+    background: transparent;
+    border-radius: 5px 0 5px 0;
+    border: 1px solid #fff;
+    color:#32CD32;
+    font-size: 12px;
+    display: block;
+    width: 200px;
+    height: 35px;
+    outline: none;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    cursor:pointer;
+    transition: .05s;
+}
+
+.input-position input{
+    width: 100px;
+    display: inline-block; 
+    margin-right: 15px; 
+}
