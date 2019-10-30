@@ -38,7 +38,7 @@ img {max-width: 100%; max-height: 100%;}
 
 .items-around-slot {
     position: relative;
-    width: 98%;
+    width: 95%;
     height: 40px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -47,6 +47,8 @@ img {max-width: 100%; max-height: 100%;}
 }
 
 .items-around-container {
+    overflow-y: auto;
+    height: 330px;
     padding: 10px;
 }
 
@@ -85,36 +87,36 @@ img {max-width: 100%; max-height: 100%;}
 
 .slots {
     height: 330px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 /* scrollbar */
 
-.slots::-webkit-scrollbar-button {
+::-webkit-scrollbar-button {
     background-repeat:no-repeat;
     width:5px;
     height:0px
 }
 
-.slots::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background-color:#ecedee
 }
 
-.slots::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     -webkit-border-radius: 0px;
     border-radius: 0px;
     background-color: rgba(0, 0, 0, .7);
     transition: all 1s;
 }
 
-.slots::-webkit-resizer {
+::-webkit-resizer {
     background-image:url('');
     background-repeat:no-repeat;
     width:4px;
     height:0px
 }
 
-.slots::-webkit-scrollbar{
+::-webkit-scrollbar{
     width: 4px;
 }
 

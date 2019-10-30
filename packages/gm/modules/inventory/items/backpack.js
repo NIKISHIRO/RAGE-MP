@@ -21,10 +21,6 @@ function changeBackpack(player, itemKey, data) {
     let newBackpack = plr.getBackpackInfo(itemKey);
     let newBackpackSlots = newBackpack.slots;
 
-    console.log(`[getBackpackInfo]`);
-    console.log(plr.getBackpackInfo(itemKey));
-    console.log(`'[currentAllWeight]': ${currentAllWeight}`.green);
-
     if (newBackpackSlots < currentAllWeight) return player.outputChatBox('!{red}У этого рюкзака слишком мало слотов!');
     
     let componentNumber = data.clothes[0];

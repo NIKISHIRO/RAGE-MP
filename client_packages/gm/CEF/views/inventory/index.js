@@ -3,7 +3,7 @@ let browser = mp.browsers.new("package://gm/CEF/views/inventory/browser/index.ht
 browser.active = false;
 
 let keyPress = false;
-mp.keys.bind(73, true, function() {
+mp.keys.bind(9, true, function() {
     keyPress = !keyPress;
 
     browser.active = keyPress;

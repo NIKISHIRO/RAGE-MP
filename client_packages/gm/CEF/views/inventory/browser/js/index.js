@@ -28,12 +28,24 @@ rpc.register('inventory:reload', function(args) {
 
         useItem.on('click', function() {
             let id = Number.parseInt($(this).parents('.inventory-slot').attr('data-id'));
-            rpc.callServer('inventory:useItem', id);
+            rpc.callServer('inventory:useItem', id)
+                .then(good => {
+                    console.log(`[inventory:useItem]: ${good}`.green);
+                })
+                .catch(error => {
+                    console.log(`error => [inventory:useItem], ${error}`.red);
+                });
         });
         
         dropItem.on('click', function() {
             let id = Number.parseInt($(this).parents('.inventory-slot').attr('data-id'));
-            rpc.callServer('inventory:dropItem', id);
+            rpc.callServer('inventory:dropItem', id)
+                .then(good => {
+                    console.log(`[inventory:dropItem]: ${good}`.green);
+                })
+                .catch(error => {
+                    console.log(`error => [inventory:dropItem], ${error}`.red);
+                });
         });
 
         divInvSlot.append(imgItem);
@@ -66,7 +78,8 @@ rpc.register('item:reload', function(args) {
             dataKey = $(this).attr('data-key');
             let data = {key: dataKey, shapeId};
             rpc.callServer('item:take', data)
-                .then(_ => null);
+                .then(_ => null)
+                .catch(_ => null);
         });
 
         imgItem.appendTo(itemsAroundSlot);

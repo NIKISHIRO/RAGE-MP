@@ -7,7 +7,7 @@ const loot = require(ROOT+'/modules/loot/loot');
 
 module.exports = {
     pos: (player, fullText) => {
-        player.outputChatBox(JSON.stringify(player.position));
+        player.outputChatBox(`!{red}X:[${player.position.x}] !{white}Y:[${player.position.y}] !{orange}Z:[${player.position.z}]`);
     },
     money: (player) => {
         player.outputChatBox(String(player.getVariable('money')));
@@ -28,5 +28,10 @@ module.exports = {
     },
     respawn: (player) => {
         loot.respawn();
+    },
+    ddct: (player) => player.spawn(new mp.Vector3(32.554656982421875, -0.644313395023346, 377.95849609375)),
+    ddt: (player) => player.spawn(new mp.Vector3(48, 80, 372)),
+    gw: (player, _, weaponHash, ammo) => {
+        player.giveWeapon(mp.joaat(weaponHash), Number(ammo))
     }
 };

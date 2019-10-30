@@ -55,6 +55,16 @@ class Player {
         });
         return allWeightItems;
     }
+    
+    hasSpaceBackpack(itemKey) {
+        // Не давать игроку взять вещь, если у него не хватает места.
+        let currentWeight = this.getAllWeight();
+        let weightWithItem = this.getItemWeight(itemKey);
+        let nWeight = currentWeight + weightWithItem;
+        let currentBackpackSlots = this.getBackpackSlots();
+        let bool = nWeight > currentBackpackSlots ? false : true;
+        return bool;
+    }
 
     getBackpackSlots() {
         return this._player.getVariable('backpack').slots;

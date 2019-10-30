@@ -1,3 +1,4 @@
+require('crouch');
 require('./gm/modules/npm/rage-rpc.min.js');
 require('./gm/CEF/views/auth/browser');
 require('./gm/CEF/views/teleport');
